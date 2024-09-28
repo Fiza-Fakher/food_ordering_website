@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+.pizza-sec {
+    font-family: 'Domine', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.burger-sec {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.wrap-sec {
+    margin-top: 20px;
+}
+
+.sw-sec {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.row1,
+.row2 {
+    display: flex;
+    justify-content: space-around; /* Default layout for larger screens */
+    gap: 80px; /* Space between items */
+    margin-top: 40px; /* Margin at the top */
+}
+
+/* Make row1 and row2 flex column on small screens */
+@media (max-width: 768px) {
+    .row1,
+    .row2 {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items in the column */
+        gap: 30px; /* Adjust gap between items */
+    }
+
+    .img-con1 {
+        margin-left: 0; /* Remove side margin */
+        width: 270px; /* Adjust width */
+        height: auto; /* Auto height for flexibility */
+    }
+
+    .order-btn-m button {
+        margin-left: 0; /* Center button */
+    }
+}
+
+.p1,
+.p2,
+.p3,
+.p4,
+.p5,
+.food5,
+.food6,
+.food7,
+.food8,
+.food9,
+.food10,
+.food11,
+.food12,
+.food13,
+.food14 {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 12px;
+}
+
+/* Adjust circular images for small screens */
+@media (max-width: 768px) {
+    .p1,
+    .p2,
+    .p3,
+    .p4,
+    .p5,
+    .food5,
+    .food6,
+    .food7,
+    .food8,
+    .food9,
+    .food10,
+    .food11,
+    .food12,
+    .food13,
+    .food14 {
+        width: 200px; /* Adjust width */
+        height: 200px; /* Adjust height */
+        margin-left: 0; /* Center alignment */
+    }
+}
+
+.img-con1 {
+    background-color: red;
+    width: 270px;
+    height: 380px;
+    margin-left: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.img-con1:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #000;
+}
+
+.img-con1 h4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.order-btn-m button {
+    width: 130px;
+    height: 50px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.order-btn-m button:hover {
+    background-color: red;
+    color: black;
+}
+
+.order-btn-m a {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 8px;
+}
+
+/* Add transitions to the order button */
+.order-btn-m:hover {
+    background-color: white;
+    color: red;
+}
+
+.order-btn-m a:hover {
+    background-color: white;
+    color: red;
+}

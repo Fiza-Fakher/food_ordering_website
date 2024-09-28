@@ -1,0 +1,16 @@
+#time{
+    background-color: black;
+    /* margin-top: 20px; */
+    margin-left: 220px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+.work{
+    display: flex;
+    margin-top: 150px;
+}
+.work h1{
+    margin-left: 75px;
+    
+}

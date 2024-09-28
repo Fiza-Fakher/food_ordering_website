@@ -1,0 +1,79 @@
+/* Ensure that the contact image scales properly */
+#contact {
+    width: 100%;
+    max-width: 450px;
+    height: auto; /* Adjust height proportionally */
+}
+
+.contact-us {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 20px; /* Adjust gap for smaller screens */
+    justify-content: center; /* Center content on smaller screens */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.con-text {
+    flex: 1 1 100%; /* Allow this section to take full width on small screens */
+    max-width: 600px; /* Set a max-width for larger screens */
+    margin: 0; /* Remove margin for better alignment on small screens */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.con-text h1 {
+    margin: 0 0 20px 0; /* Adjust margin for heading */
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    max-width: 350px; /* Set a maximum width */
+    height: 55px;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-top: 15px; /* Add margin for spacing */
+}
+
+#msg {
+    width: 100%;
+    max-width: 350px; /* Set a maximum width */
+    height: 150px;
+    border-radius: 20px;
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 100px; /* Adjust padding for textarea */
+}
+
+.send-btn {
+    background-color: red;
+    width: 100%;
+    max-width: 110px; /* Set a maximum width */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+    margin-top: 20px; /* Adjust margin for spacing */
+    border-radius: 30px;
+    text-align: center; /* Center text */
+}
+
+.send-btn a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center; /* Center the icon and text */
+}
+
+@media (max-width: 768px) {
+    .contact-us {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .con-text {
+        margin-left: 0; /* Remove margin on smaller screens */
+    }
+
+    #contact {
+        width: 100%;
+    }
+}

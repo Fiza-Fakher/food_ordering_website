@@ -1,0 +1,71 @@
+.delivery {
+    width: 100%;
+    max-width: 800px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the section */
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px; /* Add padding around the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .delivery h3 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  .cols {
+    display: flex; /* Make columns side by side */
+    gap: 30px; /* Add spacing between columns */
+    justify-content: space-between; /* Evenly distribute space */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .col-1,
+  .col-2 {
+    flex: 1; /* Allow columns to grow equally */
+    min-width: 250px; /* Minimum width for responsiveness */
+  }
+  
+  h4 {
+    margin-bottom: 8px; /* Add space below headings */
+    font-size: 16px; /* Font size for headings */
+    color: #333; /* Darker color for headings */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    width: 100%; /* Full width of parent */
+    padding: 10px; /* Padding inside input */
+    margin-bottom: 20px; /* Space between input fields */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Adjust font size */
+    box-sizing: border-box; /* Include padding in width */
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #333; /* Darker border on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  .zip-area {
+    display: flex; /* Display ZIP and state side by side */
+    gap: 15px; /* Add spacing between ZIP and State */
+  }
+  
+  .zip-no,
+  .state {
+    flex: 1; /* Allow each part to grow equally */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .cols {
+      flex-direction: column; /* Stack columns vertically */
+      gap: 20px; /* Adjust gap for smaller screens */
+    }
+  }
+  

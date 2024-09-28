@@ -1,0 +1,74 @@
+.error-t {
+    display: flex; /* Display flex to align elements */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Reduced gap for better spacing */
+    justify-content: center; /* Center elements */
+    align-items: center; /* Align items vertically */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  .err-c {
+    margin: 50px auto; /* Center content and reduce margin */
+    max-width: 600px; /* Set a max width for better control */
+    text-align: center; /* Center the text */
+  }
+  
+  .err-c h1 {
+    font-size: 2.5rem; /* Relative font size for responsiveness */
+    margin-bottom: 20px; /* Space below heading */
+  }
+  
+  .err-c h6 {
+    margin-top: 20px; /* Space above subtitle */
+    font-size: 1rem; /* Relative font size for consistency */
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center the text */
+  }
+  
+  .er {
+    margin-top: 30px; /* Space above */
+    color: aqua; /* Color for text */
+    padding-top: 20px; /* Padding to separate content */
+    text-align: center; /* Center the text */
+  }
+  
+  /* Media Queries for Smaller Screens */
+  @media (max-width: 768px) {
+    .err-c {
+      margin-top: 100px; /* Reduce top margin for smaller screens */
+      padding: 0 20px; /* Add padding to avoid edges */
+    }
+  
+    .err-c h1 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  
+    .err-c h6 {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+  
+    .error-t {
+      flex-direction: column; /* Stack items vertically */
+      gap: 30px; /* Adjust gap for better spacing */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .err-c {
+      margin-top: 70px; /* Further reduce top margin */
+    }
+  
+    .err-c h1 {
+      font-size: 1.8rem; /* Smaller font size for very small screens */
+    }
+  
+    .err-c h6 {
+      font-size: 0.8rem; /* Adjust font size */
+    }
+  
+    .er {
+      font-size: 1rem; /* Adjust font size */
+      padding-top: 10px; /* Reduce padding */
+    }
+  }
+  

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(21, 21, 21, 255);
+    color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+}
+
+.open-menu, .close-menu {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.logo p {
+    font-family: 'Lobster', serif;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 35px;
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-top: 25px;
+    margin-left: 160px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    height: 3px;
+    width: 0;
+    background-color: #E63435;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    background-color: #E63435;
+    transition: 0.3s ease-in;
+}
+
+.nav-links .active::after {
+    width: 100%;
+    background-color: #E63435;
+    transition: 0.3s ease-in;
+}
+
+.nav-links li {
+    display: flex;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 5px;
+    /* justify-content: flex-end; */
+    margin-left: 900px;
+    /* margin-bottom: 20px; */
+}
+
+/* Updated Search Box Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-input {
+    display: block;
+    width: 200px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: width 0.3s ease;
+}
+
+.search-icon {
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon:hover {
+    color: #f0f0f0;
+}
+
+.bag {
+    font-size: 25px;
+    margin-top: 25px;
+    color: #f0f0f0;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-notification {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #E63435;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.btn-desktop {
+    margin-top: 25px;
+    margin-left: 30px;
+    background-color: #E63435;
+    width: 100px;
+    height: 35px;
+    border: solid 1px #E63435;
+    border-radius: 20px;
+    padding-left: 12px;
+    padding-top: 3px;
+    margin-right: 30px;
+}
+
+.btn-mobile {
+    display: none; /* Hide by default, show in mobile menu */
+    margin: 20px 0;
+    background-color: #E63435;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.btn-mobile a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-desktop:hover, .btn-mobile a:hover {
+    background-color: #f0f0f0;
+    color: #E63435;
+    border: solid 1px white;
+}
+
+.btn-desktop a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-desktop a:hover {
+    color: #E63435;
+}
+
+/* Mobile Menu Styles */
+@media(max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: hsla(0, 0%, 6%, 0.2);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        width: 80%;
+        height: 100%;
+        padding: 6rem 3rem 0;
+        transition: right 0.4s;
+        flex-direction: column; /* Column layout for mobile menu */
+        gap: 20px; /* Add gap between items */
+    }
+
+    .nav-menu.active .nav-links {
+        right: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 20px; /* Add space between each menu item */
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        display: block; /* Ensure list items take full width */
+    }
+
+    .open-menu, .close-menu {
+        display: block;
+    }
+
+    .btn-mobile {
+        display: block; /* Show in mobile menu */
+    }
+
+    .btn-desktop {
+        display: none; /* Hide on mobile view */
+    }
+}
+
+@media (min-width: 769px) {
+    .open-menu, .close-menu {
+        display: none;
+    }
+ .btn-mobile{
+    width: 20px;
+ }
+    .nav-links ul {
+        flex-direction: row; /* Default horizontal layout */
+    }
+
+    .menu {
+        display: flex;
+    }
+}

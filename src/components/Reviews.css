@@ -1,0 +1,252 @@
+/* General styles for all screen sizes */
+.reviews {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on small screens */
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center; /* Center items horizontally */
+}
+
+.heading h4, .heading h2 {
+  text-align: center;
+}
+
+.images1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center;
+  width: 100%;
+}
+
+.layout img {
+  margin: 10px;
+}
+
+.top-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.text {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.r2, .r3 {
+  width: 100%;
+  max-width: 50%; /* Ensure width changes */
+  height: auto;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slide-in 1s ease-in-out;
+  background-color: black;
+  color: red;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px; /* Add some rounding to make it look nicer */
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.testimonial p {
+  margin-left: 20px;
+  text-align: center; /* Center text for better readability */
+}
+
+.testimonial h3 {
+  margin-left: 10px;
+  text-align: center; /* Center text for consistency */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+/* Media queries for responsiveness */
+
+/* Mobile screens */
+@media (max-width: 599px) {
+  .reviews {
+    padding: 10px;
+    flex-direction: column; /* Stack vertically on mobile */
+  }
+
+  .heading h4, .heading h2 {
+    font-size: 18px;
+  }
+
+  .images1 {
+    margin-right: 20px;
+  }
+
+  .layout img {
+    margin: 5px;
+  }
+
+  .top-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .text {
+    max-width: 100%;
+  }
+
+  .slider {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .r2, .r3 {
+    width: 100%;
+  }
+
+  .testimonial {
+    padding: 10px;
+  }
+
+  .testimonial img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Tablet screens */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .reviews {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .heading h4, .heading h2 {
+    font-size: 20px;
+  }
+
+  .images1 {
+    margin-right: 30px;
+  }
+
+  .layout img {
+    margin: 8px;
+  }
+
+  .top-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .text {
+    max-width: 90%;
+  }
+
+  .slider {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .r2, .r3 {
+    width: 100%;
+    max-width: 50%;
+  }
+
+  .testimonial {
+    padding: 15px;
+  }
+
+  .testimonial img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .reviews {
+    flex-direction: row; /* Arrange items horizontally on larger screens */
+  }
+
+  .heading h4, .heading h2 {
+    font-size: 24px;
+  }
+
+  .images1 {
+    margin-right: 40px;
+  }
+
+  .layout img {
+    margin: 10px;
+  }
+
+  .top-image {
+    width: 450px;
+    height: 350px;
+  }
+
+  .text {
+    max-width: 300px;
+  }
+
+  .slider {
+    margin-right: 150px;
+    margin-left: -105px;
+  }
+
+  .r2, .r3 {
+    width: 50%;
+  }
+
+  .testimonial {
+    padding: 20px;
+  }
+
+  .testimonial img {
+    width: 80px;
+    height: 80px;
+  }
+}
